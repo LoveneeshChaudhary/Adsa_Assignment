@@ -16,7 +16,6 @@ public class PrefixSumRangeQuery {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Input array
         System.out.print("Enter number of elements: ");
         int n = sc.nextInt();
         int[] arr = new int[n];
@@ -25,19 +24,16 @@ public class PrefixSumRangeQuery {
             arr[i] = sc.nextInt();
         }
 
-        // Build prefix sum array
         int[] prefix = new int[n];
         prefix[0] = arr[0];
         for (int i = 1; i < n; i++) {
             prefix[i] = prefix[i - 1] + arr[i];
         }
 
-        // Query input
         System.out.print("Enter range L and R (0-based index): ");
         int L = sc.nextInt();
         int R = sc.nextInt();
 
-        // Range sum
         int sum;
         if (L == 0)
             sum = prefix[R];
