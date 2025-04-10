@@ -1,5 +1,5 @@
 3. Solve the problem of finding the equilibrium index in an array. Write its algorithm, program. Find its time and space complexities. Explain with suitable example.
-  public class EquilibriumIndex {
+Ans.public class EquilibriumIndex {
     public static int findEquilibriumIndex(int[] arr) {
         int totalSum = 0;
         for (int num : arr) {
